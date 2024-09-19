@@ -194,4 +194,8 @@ body:not(:has(:target)) #pestana1 {
     line-height: 1.2;   /* Reducción del espacio entre líneas */
 }
 
+.grid-container {
+    background-color: rgba(255, 255, 255, 0); /* Fondo completamente transparente */
+    border: none; /* Elimina cualquier borde si es necesario */
+}
 
