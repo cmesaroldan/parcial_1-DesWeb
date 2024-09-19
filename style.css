@@ -56,12 +56,11 @@ nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0); /* Fondo blanco con mayor transparencia */
     color: black; /* Texto negro dentro del contenido */
     margin-top: 10px;
-    
     border-radius: 0px; /* Bordes redondeados */
+    justify-items: center;
+    align-items: center;
     
 }
-
-
 
 /* Mostrar la primera pestaña solo si no hay un hash en la URL */
 body:not(:has(:target)) #pestana1 {
@@ -73,15 +72,11 @@ body:not(:has(:target)) #pestana1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
     justify-items: center;
     align-items: center;
-    margin-top: 5em;
     background-color: rgba(255, 255, 255, 0); /* Fondo blanco con alta transparencia */
-    padding: 20px; /* Espaciado interno para separar los cuadros del borde del contenedor */
-    border-radius: 0px; /* Bordes redondeados del contenedor */
     position: relative;
-    width: 100em;
+   
 }
 
 
@@ -128,12 +123,27 @@ body:not(:has(:target)) #pestana1 {
     height: 40px; /* Tamaño de la imagen */
 }
 
-/* Asegúrate de que la sección tenga position relative para que la imagen se posicione dentro de ella */
 #pestana2 {
     position: relative;
-    padding-bottom: 50px; /* Asegura que haya espacio suficiente para la imagen */
+    padding: 40px; /* Ajusta el espaciado interno según sea necesario */
+    background-color: rgba(255, 0, 0, 0.4); /* Fondo rojo con 20% de opacidad */
+    color: black; /* Color del texto negro */
+    border-radius: 5px; /* Bordes redondeados */
+    
+    margin-left: auto;
+    margin-right: auto; /* Centrando el contenedor */
+    text-align: right; /* Centra el texto */
+    font-size: 30px;
+    width: 1400px;
 }
 
+.imagen-inferior-izquierda {
+    position: absolute;
+    bottom: 10px; /* Espacio desde el borde inferior */
+    left: 10px; /* Espacio desde el borde izquierdo */
+    width: 50px; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
 
 /* Imagen en la esquina inferior izquierda para las secciones */
 .imagen-inferior-izquierda {
@@ -144,10 +154,25 @@ body:not(:has(:target)) #pestana1 {
     height: 40px; /* Tamaño de la imagen */
 }
 
-/* Asegúrate de que la sección #pestana3 también tenga position: relative */
 #pestana3 {
     position: relative;
-    padding-bottom: 50px; /* Asegura que haya espacio suficiente para la imagen */
+    padding: 40px; /* Ajusta el espaciado interno según sea necesario */
+    background-color: rgba(102, 255, 0, 0.548); /* Fondo rojo con 20% de opacidad */
+    color: black; /* Color del texto negro */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto; /* Centrando el contenedor */
+    text-align: right; /* Centra el texto */
+    font-size: 30px;
+}
+
+.imagen-inferior-izquierda {
+    position: absolute;
+    bottom: 10px; /* Espacio desde el borde inferior */
+    left: 10px; /* Espacio desde el borde izquierdo */
+    width: 60px; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 /* Estilo para el párrafo visible en todas las pestañas */
@@ -180,7 +205,8 @@ body:not(:has(:target)) #pestana1 {
     grid-row: 1;    /* Fila superior */
     background-color: rgba(255, 99, 71, 0.4); /* Fondo tomate con 40% de opacidad */
     width: 30em;
-    height: 10em;
+    height: 15em;
+    font-size: 25px;
     
 }
 
@@ -190,6 +216,7 @@ body:not(:has(:target)) #pestana1 {
     background-color: rgba(60, 179, 113, 0.4); /* Fondo verde pasto con 40% de opacidad */
     width: 30em;
     height: 10em;
+    font-size: 25px;
 }
 
 .grid-item.item-tcpip {
@@ -197,7 +224,8 @@ body:not(:has(:target)) #pestana1 {
     grid-row: 1/3;    /* Fila central */
     background-color: rgba(70, 130, 180, 0.4); /* Fondo acero con 40% de opacidad */
     width: 30em;
-    height: 10em;
+    height: 20em;
+    font-size: 25px;
 }
 
 .grid-item.item-css {
@@ -205,7 +233,8 @@ body:not(:has(:target)) #pestana1 {
     grid-row: 2;    /* Fila inferior */
     background-color: rgba(255, 215, 0, 0.4); /* Fondo oro con 40% de opacidad */
     width: 30em;
-    height: 10em;
+    height: 15em;
+    font-size: 25px;
 }
 
 /* Imagen dentro de los items */
@@ -230,10 +259,6 @@ body:not(:has(:target)) #pestana1 {
 .grid-item p{
     font-size: 1em;
 }
-
-
-
-
 
 
 /* Mostrar el contenido de la pestaña activa */
