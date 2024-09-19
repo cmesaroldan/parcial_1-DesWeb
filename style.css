@@ -1,27 +1,24 @@
-/* Estilo general */
 body {
     font-family: Arial, sans-serif;
-    background-color: black; /* Fondo negro de respaldo si no carga la imagen */
-    background-image: url('./pexels-kovyrina-937980.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* La imagen cubrirá todo el fondo */
-    background-position: center; /* La imagen se centrará */
-    background-attachment: fixed; /* Mantener la imagen fija al hacer scroll */
-    color: white; /* Texto en blanco por defecto */
+    background-color: black;
+    background-image: url('./pexels-kovyrina-937980.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
     margin: 0;
     padding: 0;
 }
 
-/* Título */
 header h1 {
     text-align: center;
     font-size: 3em;
     margin: 20px 0;
-    color: white; /* Letras en blanco */
+    color: white;
 }
 
-/* Barra de navegación continua */
 nav {
-    background-color: white; /* Fondo blanco */
+    background-color: white;
     padding: 10px 0;
 }
 
@@ -30,8 +27,8 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Alinear hacia la izquierda */
-    padding-left: 20px; /* Espaciado desde el borde izquierdo */
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 nav ul li {
@@ -39,241 +36,177 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black; /* Texto negro */
+    color: black;
     text-decoration: none;
     padding: 15px 20px;
     display: inline-block;
 }
 
 nav ul li a:hover {
-    background-color: #e0e0e0; /* Color gris claro al pasar el mouse */
+    background-color: #e0e0e0;
 }
 
-/* Contenido de las pestañas */
 .tab-content {
     display: none;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0); /* Fondo blanco con mayor transparencia */
-    color: black; /* Texto negro dentro del contenido */
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
     margin-top: 10px;
-    border-radius: 0px; /* Bordes redondeados */
-    justify-items: center;
-    align-items: center;
-    
+    border-radius: 0;
 }
 
-/* Mostrar la primera pestaña solo si no hay un hash en la URL */
 body:not(:has(:target)) #pestana1 {
     display: block;
 }
 
-/* Contenedor de los cuadros en forma de cruz */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0); /* Fondo blanco con alta transparencia */
+    background-color: rgba(255, 255, 255, 0);
     position: relative;
-   
 }
 
-
-/* Estilo de los cuadros */
 .grid-item {
-    position: relative; /* Para posicionar la imagen relativa al cuadro */
+    position: relative;
     background-color: white;
     color: black;
     width: 150px;
     height: 150px;
     display: flex;
-    flex-direction: column; /* Permite que el texto y la imagen estén en columna */
-    justify-content: flex-start; /* Alinear el contenido en la parte superior */
-    text-align: left; /* Alinear texto a la izquierda */
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
     padding: 10px;
     border-radius: 5px;
     font-size: 1.2em;
-    overflow: hidden; /* Para evitar que el contenido sobresalga */
+    overflow: hidden;
 }
 
-/* Imagen pequeña en la esquina inferior izquierda */
 .cuadro-imagen {
     position: absolute;
-    bottom: 10px; /* Separación desde el borde inferior */
-    left: 10px;  /* Separación desde el borde izquierdo */
-    width: 40px; /* Ancho de la imagen */
-    height: 40px; /* Alto de la imagen */
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
 }
 
-/* Estilo para los h3 en los cuadros */
 .grid-item h3 {
-    color: rgb(0, 102, 255); /* Color naranja para los títulos */
-    text-align: right; /* Alinear el texto a la derecha */
-    margin: 0; /* Quitar márgenes por defecto */
-    padding-bottom: 10px; /* Agregar un espacio entre el título y el contenido debajo */
+    color: rgb(0, 102, 255);
+    text-align: right;
+    margin: 0;
+    padding-bottom: 10px;
 }
 
-/* Estilo para la imagen en la esquina inferior izquierda dentro de la sección */
 .imagen-inferior-izquierda {
     position: absolute;
-    bottom: 10px; /* Separación desde el borde inferior */
-    left: 10px;   /* Separación desde el borde izquierdo */
-    width: 40px;  /* Tamaño de la imagen */
-    height: 40px; /* Tamaño de la imagen */
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#pestana2, #pestana3 {
+    position: relative;
+    padding: 40px;
+    color: black;
+    border-radius: 5px;
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    font-size: 30px;
 }
 
 #pestana2 {
-    position: relative;
-    padding: 40px; /* Ajusta el espaciado interno según sea necesario */
-    background-color: rgba(255, 0, 0, 0.4); /* Fondo rojo con 20% de opacidad */
-    color: black; /* Color del texto negro */
-    border-radius: 5px; /* Bordes redondeados */
-    
-    margin-left: auto;
-    margin-right: auto; /* Centrando el contenedor */
-    text-align: right; /* Centra el texto */
-    font-size: 30px;
-    width: 1400px;
-}
-
-.imagen-inferior-izquierda {
-    position: absolute;
-    bottom: 10px; /* Espacio desde el borde inferior */
-    left: 10px; /* Espacio desde el borde izquierdo */
-    width: 50px; /* Ajusta el tamaño de la imagen si es necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Imagen en la esquina inferior izquierda para las secciones */
-.imagen-inferior-izquierda {
-    position: absolute;
-    bottom: 10px; /* Separación desde el borde inferior */
-    left: 10px;   /* Separación desde el borde izquierdo */
-    width: 40px;  /* Tamaño de la imagen */
-    height: 40px; /* Tamaño de la imagen */
+    background-color: rgba(255, 0, 0, 0.4);
 }
 
 #pestana3 {
-    position: relative;
-    padding: 40px; /* Ajusta el espaciado interno según sea necesario */
-    background-color: rgba(102, 255, 0, 0.548); /* Fondo rojo con 20% de opacidad */
-    color: black; /* Color del texto negro */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 1400px;
-    margin-left: auto;
-    margin-right: auto; /* Centrando el contenedor */
-    text-align: right; /* Centra el texto */
-    font-size: 30px;
+    background-color: rgba(102, 255, 0, 0.548);
 }
 
-.imagen-inferior-izquierda {
-    position: absolute;
-    bottom: 10px; /* Espacio desde el borde inferior */
-    left: 10px; /* Espacio desde el borde izquierdo */
-    width: 60px; /* Ajusta el tamaño de la imagen si es necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Estilo para el párrafo visible en todas las pestañas */
-.universidad {
-    text-align: center; /* Centra el texto */
-    font-size: 1.2em;   /* Tamaño de letra ajustado */
-    margin: 10px 0;     /* Espacio superior e inferior reducido */
-    color: white;       /* Color del texto */
-    line-height: 1.2;   /* Reducción del espacio entre líneas */
-}
-
-
-/* Estilos generales para todos los items */
-.grid-item {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-    margin-top: 40px;
-    padding: 40px; 
-    border-radius: 20px;
-}
-
-    
-/* Posición de los cuadros en cruz */
 .grid-item.item-html {
-    grid-column: 2; /* Cuadro en el centro superior */
-    grid-row: 1;    /* Fila superior */
-    background-color: rgba(255, 99, 71, 0.4); /* Fondo tomate con 40% de opacidad */
-    width: 30em;
-    height: 15em;
-    font-size: 25px;
-    
-}
-
-.grid-item.item-dns {
-    grid-column: 1; /* Cuadro a la izquierda del centro */
-    grid-row: 1/3;    /* Fila central */
-    background-color: rgba(60, 179, 113, 0.4); /* Fondo verde pasto con 40% de opacidad */
+    grid-column: 2;
+    grid-row: 1;
+    background-color: rgba(255, 99, 71, 0.4);
     width: 30em;
     height: 10em;
     font-size: 25px;
+
+    border-top: 5px solid white; /* Borde superior blanco */
+    border-left: 5px solid rgba(255, 0, 43, 0.836); /* Borde izquierdo azul */
+    border-bottom: 5px solid rgba(255, 0, 43, 0.836); /* Borde inferior azul */
+    border-right: none; /* Sin borde derecho */
+}
+
+.grid-item.item-dns {
+    grid-column: 1;
+    grid-row: 1/3;
+    background-color: rgba(60, 179, 113, 0.4);
+    width: 30em;
+    height: 7em;
+    font-size: 25px;
+
+    border-top: 5px solid white; /* Borde superior blanco */
+    border-left: 5px solid blue; /* Borde izquierdo azul */
+    border-bottom: 5px solid blue; /* Borde inferior azul */
+    border-right: none; /* Sin borde derecho */
 }
 
 .grid-item.item-tcpip {
-    grid-column: 3; /* Cuadro a la derecha del centro */
-    grid-row: 1/3;    /* Fila central */
-    background-color: rgba(70, 130, 180, 0.4); /* Fondo acero con 40% de opacidad */
+    grid-column: 3;
+    grid-row: 1/3;
+    background-color: rgba(70, 130, 180, 0.4);
     width: 30em;
-    height: 20em;
+    height: 10em;
     font-size: 25px;
+
+    border-top: 5px solid white; /* Borde superior blanco */
+    border-left: 5px solid rgba(0, 255, 170, 0.863); /* Borde izquierdo azul */
+    border-bottom: 5px solid blue; /* Borde inferior azul */
+    border-right: none; /* Sin borde derecho */
 }
 
 .grid-item.item-css {
-    grid-column: 2; /* Cuadro en el centro inferior */
-    grid-row: 2;    /* Fila inferior */
-    background-color: rgba(255, 215, 0, 0.4); /* Fondo oro con 40% de opacidad */
+    grid-column: 2;
+    grid-row: 2;
+    background-color: rgba(255, 215, 0, 0.4);
     width: 30em;
-    height: 15em;
+    height: 12em;
     font-size: 25px;
+
+    border-top: 5px solid white; /* Borde superior blanco */
+    border-left: 5px solid blue; /* Borde izquierdo azul */
+    border-bottom: 5px solid blue; /* Borde inferior azul */
+    border-right: none; /* Sin borde derecho */
 }
 
-/* Imagen dentro de los items */
 .grid-item img.cuadro-imagen {
     position: absolute;
-    bottom: 10px; /* Espacio desde el borde inferior */
-    left: 10px;   /* Espacio desde el borde izquierdo */
-    width: 40px;  /* Ajusta el tamaño de la imagen si es necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: auto;
 }
 
-
-/* Asegúrate de que la imagen no se sobreponga al texto */
-.grid-item img.cuadro-imagen {
-    position: absolute;
-    bottom: 10px; /* Espacio desde el borde inferior */
-    left: 10px;   /* Espacio desde el borde izquierdo */
-    width: 50px;  /* Ajusta el tamaño de la imagen si es necesario */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
-
-.grid-item p{
+.grid-item p {
     font-size: 1em;
 }
 
-
-/* Mostrar el contenido de la pestaña activa */
 #pestana1:target,
 #pestana2:target,
 #pestana3:target {
-    display: block; /* Mostrar la pestaña seleccionada */
+    display: block;
 }
 
-/* Estilo para la barra de navegación */
 .tabs {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #003366; /* Color de fondo azul oscuro */
+    background-color: #003366;
 }
 
 .tabs li {
@@ -283,20 +216,51 @@ body:not(:has(:target)) #pestana1 {
 .tabs a {
     display: inline-block;
     padding: 10px 20px;
-    color: white; /* Color del texto en blanco */
+    color: white;
     text-decoration: none;
-    background-color: #003366; /* Color de fondo azul oscuro */
-    border: 1px solid #003366; /* Borde azul oscuro */
+    background-color: #003366;
+    border: 1px solid #003366;
     border-radius: 5px;
 }
 
 .tabs a:hover,
 .tabs a:focus {
-    background-color: #0055a5; /* Color de fondo azul más claro al pasar el ratón */
+    background-color: #0055a5;
 }
 
 
 
+.universidad {
+    text-align: center; 
+    font-size: 1.2em;
+    color: white; 
+    margin: 0;
+    line-height: 1.4;
+}
+
+header {
+    text-align: center; 
+    margin: 0;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em; 
+    color: #ffffff; 
+    margin: 0;
+    padding-bottom: 10px; 
+}
+
+header h2 {
+    font-size: 1.5em; 
+    color: #f17e12da; 
+    margin: 0;
+    padding-top: 10px; 
+    font-family: 'Arial', sans-serif; 
+    font-weight: 300; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+}
 
 
 
