@@ -194,8 +194,66 @@ body:not(:has(:target)) #pestana1 {
     line-height: 1.2;   /* Reducción del espacio entre líneas */
 }
 
-.grid-container {
-    background-color: rgba(255, 255, 255, 0); /* Fondo completamente transparente */
-    border: none; /* Elimina cualquier borde si es necesario */
+
+/* Estilos generales para todos los items */
+.grid-item {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px; 
+    border-radius: 10px;
 }
+
+    
+/* Posición de los cuadros en cruz */
+.grid-item.item-html {
+    grid-column: 2; /* Cuadro en el centro superior */
+    grid-row: 1;    /* Fila superior */
+    background-color: rgba(255, 99, 71, 0.4); /* Fondo tomate con 40% de opacidad */
+    
+}
+
+.grid-item.item-dns {
+    grid-column: 1; /* Cuadro a la izquierda del centro */
+    grid-row: 1/3;    /* Fila central */
+    background-color: rgba(60, 179, 113, 0.4); /* Fondo verde pasto con 40% de opacidad */
+}
+
+.grid-item.item-tcpip {
+    grid-column: 3; /* Cuadro a la derecha del centro */
+    grid-row: 1/3;    /* Fila central */
+    background-color: rgba(70, 130, 180, 0.4); /* Fondo acero con 40% de opacidad */
+}
+
+.grid-item.item-css {
+    grid-column: 2; /* Cuadro en el centro inferior */
+    grid-row: 2;    /* Fila inferior */
+    background-color: rgba(255, 215, 0, 0.4); /* Fondo oro con 40% de opacidad */
+}
+
+/* Imagen dentro de los items */
+.grid-item img.cuadro-imagen {
+    position: absolute;
+    bottom: 10px; /* Espacio desde el borde inferior */
+    left: 10px;   /* Espacio desde el borde izquierdo */
+    width: 40px;  /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+
+/* Asegúrate de que la imagen no se sobreponga al texto */
+.grid-item img.cuadro-imagen {
+    position: absolute;
+    bottom: 10px; /* Espacio desde el borde inferior */
+    left: 10px;   /* Espacio desde el borde izquierdo */
+    width: 50px;  /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
 
